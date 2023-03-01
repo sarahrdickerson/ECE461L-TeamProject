@@ -1,7 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    fetch('/login').then(response => {
+      return response.text();
+    }).then(html => {
+      document.body.innerHTML = html;
+    });
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +25,7 @@ function App() {
           rel="noopener noreferrer"
         >
         </a>
+        
       </header>
     </div>
   );

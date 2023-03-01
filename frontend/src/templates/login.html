@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <!-- <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
     <title>Login</title>
   </head>
   <body>
     <h1>Login!</h1>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      {{ form.username }}
+      {{ form.password }}
+      {{ form.submit }}
+    </form>
+
+    <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename = 'login.js') }}"></script> -->
+
   </body>
 
-  <script src="../screens/login.js"></script>
 </html>
