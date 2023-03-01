@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 function App() {
   // sample getting login form from backend and rendering it
   useEffect(() => {
-    fetch('/login').then(response => {
+    fetch('/register').then(response => {
       return response.text();
     }).then(html => {
       document.body.innerHTML = html;
