@@ -9,10 +9,18 @@
   <body>
     <h1>Login!</h1>
     <form method="POST" action="">
+      <label for="title">Login</label>
+      <br>
       {{ form.hidden_tag() }}
+      <label for="username">Username: </label>
       {{ form.username }}
+      <br>
+      <label for="password">Password: </label>
       {{ form.password }}
+      <br>
       {{ form.submit }}
+
+      <input type="submit" value="Login"/>
     </form>
 
     <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
