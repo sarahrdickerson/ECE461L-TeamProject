@@ -18,9 +18,10 @@ from flask_bcrypt import Bcrypt
 import uuid
 import os
 
-template_dir = os.path.abspath('../frontend/src/templates')
-static_dir = os.path.abspath('../frontend/src/static')
-app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+# template_dir = os.path.abspath('../frontend/src/templates')
+# static_dir = os.path.abspath('../frontend/src/static')
+# app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+app = Flask(__name__)
 
 app.config['MONGO_URI'] = 'mongodb+srv://gabrielaperezgil:ECE461L@cluster0.5v3hp19.mongodb.net/Existing_Users'
 app.secret_key = 'secretkey'
