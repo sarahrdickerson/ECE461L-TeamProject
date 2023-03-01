@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  // sample getting login form from backend and rendering it
   useEffect(() => {
     fetch('/login').then(response => {
       return response.text();

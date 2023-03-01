@@ -18,9 +18,6 @@ from flask_bcrypt import Bcrypt
 import uuid
 import os
 
-# template_dir = os.path.abspath('../frontend/src/templates')
-# static_dir = os.path.abspath('../frontend/src/static')
-# app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 app = Flask(__name__)
 
 app.config['MONGO_URI'] = 'mongodb+srv://gabrielaperezgil:ECE461L@cluster0.5v3hp19.mongodb.net/Existing_Users'
@@ -106,6 +103,7 @@ class RegisterForm(FlaskForm):
         if user_object is not None:
             raise ValidationError("Username already exists. Select a different username.")
     
+    #this was giving me problems
     # def validate_email(self, email):
     #     email_object = User.get_by_email(email.data)
     #     if email_object is not None:
